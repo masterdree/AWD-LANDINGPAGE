@@ -1,0 +1,202 @@
+.box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    margin: 0; 
+}
+.box {
+    width: 120px;
+    height: 100px;
+    border: 3px solid rgb(119, 119, 119);
+    margin: 10px;
+    cursor: pointer;
+    background-color: rgb(18, 11, 46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+    transition: all 0.3s ease; 
+}
+
+.box:hover {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), 
+                -3px -3px 10px rgba(19, 13, 13, 0.5);
+    transform: scale(1.1); 
+}
+
+.box1 { background-color: #008000; }
+.box2 { background-color: #ADFF2F; }
+.box3 { background-color: #7CFC00; }
+.box4 { background-color: #32CD32; }
+.box5 { background-color: #98FB98; }
+.box6 { background-color: #2E8B57; }
+.box7 { background-color: #3CB371; }
+
+#big-box, #big-box1, #big-box2, #big-box3, #big-box4, #big-box5, #big-box6, #big-box7 {
+    position: fixed;
+    right: 39%; 
+    top: 40%;
+    width: 300px; 
+    height: 300px; 
+    display: none; 
+    animation: moveDown 1.5s forwards, fadeOut 2s forwards;
+    border: 5px solid black; 
+    z-index: 9999; /* This ensures the box-container is always at the front */
+}
+
+
+#big-box1 { background-color: #008000; border-color: #008000; }
+#big-box2 { background-color: #ADFF2F; border-color: #ADFF2F; }
+#big-box3 { background-color: #7CFC00; border-color: #7CFC00; }
+#big-box4 { background-color: #32CD32; border-color: #32CD32; }
+#big-box5 { background-color: #98FB98; border-color: #98FB98; }
+#big-box6 { background-color: #2E8B57; border-color: #2E8B57; }
+#big-box7 { background-color: #3CB371; border-color: #3CB371; }
+
+@keyframes moveDown1 {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(100%); 
+    }
+}
+@keyframes moveDown2 {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(100%); 
+    }
+}
+
+@keyframes moveDown3 {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(100%); 
+    }
+}
+
+@keyframes moveDown4 {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(100%); 
+    }
+}
+
+@keyframes moveDown5 {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(100%); 
+    }
+}
+
+@keyframes moveDown6 {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(100%); 
+    }
+}
+
+@keyframes moveDown7 {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(100%); 
+    }
+}
+
+
+@keyframes fadeOut {
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes moveUp1 {
+    0% {
+        transform: translateX(100%);
+        background-color: transparent;
+    }
+    100% {
+        transform: translateX(-150%);
+        background-color: #008000;
+    }
+}
+
+@keyframes moveUp2 {
+    0% {
+        transform: translateX(100%);
+        background-color: transparent;
+    }
+    100% {
+        transform: translateX(-150%);
+        background-color: #ADFF2F;
+    }
+}
+
+@keyframes moveUp3 {
+    0% {
+        transform: translateX(100%);
+        background-color: transparent;
+    }
+    100% {
+        transform: translateX(-150%);
+        background-color: #7CFC00;
+    }
+}
+
+@keyframes moveUp4 {
+    0% {
+        transform: translateX(100%);
+        background-color: transparent;
+    }
+    100% {
+        transform: translateX(-150%);
+        background-color: #32CD32;
+    }
+}
+
+@keyframes moveUp5 {
+    0% {
+        transform: translateX(100%);
+        background-color: transparent;
+    }
+    100% {
+        transform: translateX(-150%);
+        background-color: #98FB98;
+    }
+}
+
+@keyframes moveUp6 {
+    0% {
+        transform: translateX(100%);
+        background-color: transparent;
+    }
+    100% {
+        transform: translateX(-150%);
+        background-color: #2E8B57;
+    }
+}
+
+@keyframes moveUp7 {
+    0% {
+        transform: translateX(100%);
+        background-color: transparent;
+    }
+    100% {
+        transform: translateX(-150%);
+        background-color: #3CB371;
+    }
+}

@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(90deg, #86A7FC, #3468C0);
+    position: relative;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 200%;
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+body::before {
+    left: 0;
+}
+
+body::after {
+    right: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem; 
+}
+
+.button{
+    border: none;
+    outline: none;
+    background: #ffffff;
+    color:#86A7FC;
+    font-size: 5ch; 
+    font-family: monospace;
+    margin: 1rem;
+    padding: 2rem 4rem;
+    box-shadow: 5px 5px 10px #2c2c2c;
+    border-radius: 70px;
+    text-align: center;
+    z-index: 1;
+    transition: transform 0.3s ease; 
+    
+    &.active{
+        transform:translate(5%, 5%);
+        box-shadow: 0px 0px 0px rgb(0, 0, 0);
+    }
+
+
+}
+
+.button:hover {
+    transform: scale(1.1); 
+}
+
+.notification{
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    position: relative;
+    color: transparent;
+
+
+    &::after{
+        min-width: 90px;
+        min-height: 90px;
+        content: attr(data-count);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        top: 80px; 
+        right:60px;
+        transition: 0,3s;
+        opacity: 0;
+        transform: scale(0.5);
+        font-size: 3rem; 
+    }
+
+
+    &::before{
+        content: '\f0f3';
+        font-family: 'Font Awesome 5 Free';
+        display: block;
+        color: rgb(255, 255, 255);
+        font-size: 30rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); 
+    }
+
+    &.count::after{
+        opacity: 1;
+        transform: scale(1);
+        color: rgb(255, 255, 255);
+    }
+
+    &.notify::before{
+        animation: belltiling 1s ease-in-out;
+
+    }
+}
+
+@keyframes belltiling{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+    75%{
+        transform: rotate(15deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
